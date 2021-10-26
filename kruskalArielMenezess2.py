@@ -18,16 +18,15 @@ def ord_per_cost(heap,vector):
             
 
 for i in range(nA):
-    """[this for read the inputs v1,v2,c ... v1 is the vertice one of the pair of vertices taht makes the
+    """this for read the inputs v1,v2,c ... v1 is the vertice one of the pair of vertices taht makes the
         edge, v2 is the vertice two of that pair and c is the cost of the edge traveling from vertice one
-        to vertice two and vice versa.]
+        to vertice two and vice versa.
 
     Args:
-        aux ([list]): [aux is the auxiliar thats guard the v1,v2,c, and the second input of the 
-                        ord_per_cost function]
-        v1 ([int]): [is the vertice one]
-        v2 ([int]): [is the vertice two]
-        c  ([int]): [is the cost of the edge v1,v2]
+        aux (list): aux is the auxiliar thats guard the v1,v2,c, and the second input of the ord_per_cost function
+        v1 (int): is the vertice one
+        v2 (int): is the vertice two
+        c  (int): is the cost of the edge v1,v2
         
     """
     aux = []
@@ -64,12 +63,11 @@ cost = 0
 #cost is the sum of all the cost of the vertices with the algorithm pass to create the final tree
 
 while cont < nV-1:
-    """[in this looping, the cont just increase if v1 and v2 don't belong to the same tree and stop when cont is nV-1,
-        this is the main part where the krukal algorithm logic real works]
+    """in this looping, the cont just increase if v1 and v2 don't belong to the same tree and stop when cont is nV-1, this is the main part where the krukal algorithm logic real works
        
-       c ([int]): [receive the cost coming from the orded_edge_vector]
-       v1 ([int]): [receive the vertice one coming from the orded_edge_vector] 
-       v2 ([int]): [receive the vertice two coming from the orded_edge_vector]
+       c (int): receive the cost coming from the orded_edge_vector
+       v1 (int): receive the vertice one coming from the orded_edge_vector
+       v2 (int): receive the vertice two coming from the orded_edge_vector
     """
     c,v1,v2  = orded_edge_vector.pop(0)
     if components[v1] != components[v2]:
